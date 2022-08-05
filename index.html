@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <main>
+    <section class="app">
+      <section class="calculator">
+        <div class="bill column">
+          <label for="bill" class="calculator-txt">Bill</label>
+          <a class="dollar"><input type="number" name="bill" id="bill" placeholder="0" max="9999"> </a>
+        </div>
+
+        <div class="tip column">
+          <h2 class="calculator-txt">Select Tip %</h2>
+          <div class="tip-content">
+            <button class="tip-percent" id="5" value="0.05">5%</button>
+            <button class="tip-percent" id="10" value="0.1">10%</button>
+            <button class="tip-percent" id="15" value="0.15">15%</button>
+            <button class="tip-percent" id="25" value="0.25">25%</button>
+            <button class="tip-percent" id="50" value="0.5">50%</button>
+            <input type="number" class="tip-percent" id="tip-input" placeholder="0">
+          </div>
+        </div>
+
+        <div class="people column">
+          <label for="people" class="calculator-txt">Number of People</label> 
+          <a class="user"><input type="number" name="people" id="people" placeholder="0"></a> 
+        </div>
+      </section>
+
+      <section class="display">
+        <div class="amount row">
+          <div class="amount__txt column">
+            <h2>Tip Amount</h2> 
+            <div class="calculator-txt">/ person</div> 
+          </div>
+          <a class="money"><div class="amount__num num" id="tip">0</div><span>$</span></a> 
+        </div>
+
+        <div class="total row">
+          <div class="total__txt column">
+            <h2>Total</h2> 
+            <div class="calculator-txt">/ person</div> 
+          </div>
+          <a class="money"><div class="total__num num" id="total">0</div><span>$</span></a>
+        </div>
+
+        <button class="reset" id="reset">RESET</button>
+      </section>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+
+  
+
+
+
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

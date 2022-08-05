@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #c5e4e7;
+  font-family: 'Space Mono'; }
+
+.app {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 30px; }
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  gap: 20px;
+  padding: 20px; }
+  .calculator .bill {
+    position: relative; }
+
+.display {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #00494d;
+  border-radius: 20px;
+  padding: 30px;
+  gap: 40px; }
+  .display .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #26c0ab; }
+    .display .row a {
+      display: flex;
+      flex-direction: row;
+      justify-content: right; }
+  .display .reset {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    color: #00494d;
+    background-color: #26c0ab;
+    padding: 13px 0;
+    transition: .2s ease-in-out;
+    cursor: pointer; }
+    .display .reset:hover {
+      background-color: #c5e4e7; }
+    .display .reset:active {
+      box-shadow: 10px 14px 18px #333; }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; }
+
+.calculator-txt {
+  color: #7f9c9f;
+  font-size: .8rem;
+  font-weight: bold; }
+
+h2 {
+  font-size: .8rem;
+  font-weight: bold;
+  color: white; }
+
+input:focus {
+  outline: none; }
+
+input {
+  position: relative;
+  font-size: 1.5rem;
+  font-family: inherit;
+  text-align: right;
+  border: 2px solid #c5e4e7;
+  border-radius: 5px;
+  padding: 5px;
+  transition: .2s ease-in-out;
+  cursor: pointer; }
+  input:focus {
+    border: 2px solid #26c0ab; }
+  input:invalid {
+    border: 2px solid red; }
+
+.dollar {
+  position: relative; }
+  .dollar::before {
+    position: absolute;
+    content: '$';
+    width: 30px;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: #7f9c9f;
+    background: white;
+    z-index: 100; }
+
+.user {
+  position: relative; }
+  .user::before {
+    position: absolute;
+    content: url(/images/icon-person.svg);
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100; }
+
+.tip-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: center; }
+  .tip-content .tip-percent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    height: 40px;
+    background-color: #00494d;
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+    cursor: pointer; }
+    .tip-content .tip-percent:hover, .tip-content .tip-percent:focus {
+      color: #00494d;
+      background-color: #26c0ab; }
+  .tip-content #tip-input {
+    font-size: 1.5rem;
+    color: #00494d;
+    background-color: #f4fafa; }
+
+@media screen and (max-width: 1080px) {
+  .app {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    max-height: 700px; }
+  .tip-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    align-items: stretch; }
+    .tip-content .tip-percent {
+      max-width: 160px; }
+  .display {
+    max-height: 250px; } }
+
+@media screen and (max-width: 560px) {
+  .app {
+    transform: scale(0.9); } }
+
+@media screen and (max-width: 500px) {
+  .app {
+    transform: scale(0.7); } }
+
+@media screen and (max-width: 400px) {
+  .app {
+    transform: scale(0.5); } }
