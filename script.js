@@ -35,7 +35,7 @@ function calculateTip() {
 }
 
 function addTip() {
-    totalEl.innerHTML = Number(billElValue) + Number(tip);
+    totalEl.innerHTML = Number(billElValue) / Number(peopleElValue) + Number(tip);
 }
 
 tipPercentEl.forEach(button => {
